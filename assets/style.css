@@ -18,6 +18,10 @@ body {
     font-family: sans-serif;
 }
 
+.select-container {
+    width: 100%;
+}
+
 /* <1-fold SSSSS CONTAINER SSSSS */
 #icon-container {
     height: 100vh;
