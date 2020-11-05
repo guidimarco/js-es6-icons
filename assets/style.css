@@ -44,6 +44,7 @@ body {
     align-items: center;
     float: left;
     margin: 10px;
+    font-weight: bold;
 }
 .icon-card i {
     margin: 5px;

@@ -8,7 +8,7 @@
 
 $("document").ready(function() {
     // VAR ASSIGNMENT
-    const icons = [ // icone {name, prefix, type, family}
+    const icons = [ // icon {name, prefix, type, family}
         {
             name: 'cat',
             prefix: 'fa-',
@@ -106,22 +106,58 @@ $("document").ready(function() {
             family: 'fas'
         }
     ];
-
     console.log(icons);
 
+    const iconType = [ // icons-types --> n
+
+    ];
+    console.log(iconType);
+
+    const iconColor = [ // icons-colors --> n
+        "red",
+        "green",
+        "blue"
+    ];
+    console.log(iconColor);
+
+    // mileston 2 - part 1
+    icons.forEach( (icon) => { // create an arrow --> icon-type
+        let {type} = icon; // desctructuration
+        // console.log(type);
+        if (!iconType.includes(type)) {
+            iconType.push(type);
+        }
+    });
+
+    // milestone 1
     icons.forEach((icon) => { // stamp all icon
-        let {name, prefix, family} = icon; // destructuration
+        let {name, prefix, type, family} = icon; // destructuration
         // console.log(name);
         // console.log(prefix);
         // console.log(family);
+
+        // milestone 2 - part 2 - associate icon and color
+        typeIndex = iconType.indexOf(type);
+        // console.log(typeIndex);
+
+        let color = iconColor[typeIndex];
+        // console.log(color);
+
+        // print-out + color
         $("#icon-container").append(`
             <div class="icon-card">
-                <i class="${family} ${prefix}${name} ${prefix}2x"></i>
+                <i class="${family} ${prefix}${name} ${prefix}2x" style="color: ${color}"></i>
                 <span>${name}</span>
             </div>
         `);
 
     });
+
+
+
+
+
+
 
 
 });
