@@ -7,7 +7,8 @@
 // </1-fold> EEEEE ALL FUNCTION EEEEE
 
 $("document").ready(function() {
-    const icons = [
+    // VAR ASSIGNMENT
+    const icons = [ // icone {name, prefix, type, family}
         {
             name: 'cat',
             prefix: 'fa-',
@@ -107,5 +108,20 @@ $("document").ready(function() {
     ];
 
     console.log(icons);
+
+    icons.forEach((icon) => { // stamp all icon
+        let {name, prefix, family} = icon; // destructuration
+        // console.log(name);
+        // console.log(prefix);
+        // console.log(family);
+        $("#icon-container").append(`
+            <div class="icon-card">
+                <i class="${family} ${prefix}${name} ${prefix}2x"></i>
+                <span>${name}</span>
+            </div>
+        `);
+
+    });
+
 
 });
